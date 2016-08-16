@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.60784313725490191" green="0.11372549019607843" blue="0.12156862745098039" alpha="1"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="720" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="720">
                                 <rect key="frame" x="20" y="102" width="134" height="193"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,11 +69,14 @@
                                 <connections>
                                     <segue id="1568" destination="1524" kind="push"/>
                                 </connections>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-1518" y="102" width="1672" height="1254"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="20" y="102" width="134" height="193"/>
                                 </variation>
+                                <constraints>
+                                    <constraint id="2342" firstItem="720" firstAttribute="height" constant="193"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1166" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1166">
                                 <rect key="frame" x="162" y="102" width="138" height="193"/>
                                 <state key="normal" backgroundImage="ptv.gif">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,8 +87,11 @@
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <rect key="frame" x="162" y="102" width="138" height="193"/>
                                 </variation>
+                                <constraints>
+                                    <constraint id="2347" firstItem="1166" firstAttribute="height" constant="193"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1167" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1167">
                                 <rect key="frame" x="20" y="303" width="134" height="185"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.93333333333333335" green="0.93725490196078431" blue="0.96078431372549022" alpha="1"/>
                                 <state key="normal" backgroundImage="Map.png">
@@ -94,8 +100,11 @@
                                 <connections>
                                     <segue id="2163" destination="2111" kind="push"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="2355" firstItem="1167" firstAttribute="height" constant="185"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1168" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1168">
                                 <rect key="frame" x="162" y="303" width="138" height="185"/>
                                 <state key="normal" backgroundImage="eventmike.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,8 +112,29 @@
                                 <connections>
                                     <segue id="2102" destination="1940" kind="push"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="2360" firstItem="1168" firstAttribute="height" constant="185"/>
+                                </constraints>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint id="2340" firstItem="15" firstAttribute="trailing" secondItem="720" secondAttribute="trailing" constant="166"/>
+                            <constraint id="2341" firstItem="720" firstAttribute="leading" secondItem="15" secondAttribute="leading" constant="20"/>
+                            <constraint id="2345" firstItem="1166" firstAttribute="leading" secondItem="720" secondAttribute="trailing" constant="8"/>
+                            <constraint id="2346" firstItem="15" firstAttribute="trailing" secondItem="1166" secondAttribute="trailing" constant="20"/>
+                            <constraint id="2348" firstItem="1166" firstAttribute="top" secondItem="15" secondAttribute="top" constant="102"/>
+                            <constraint id="2349" firstItem="720" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="38"/>
+                            <constraint id="2350" firstItem="15" firstAttribute="bottom" secondItem="1166" secondAttribute="bottom" constant="273"/>
+                            <constraint id="2352" firstItem="15" firstAttribute="bottom" secondItem="720" secondAttribute="bottom" constant="273"/>
+                            <constraint id="2353" firstItem="15" firstAttribute="trailing" secondItem="1167" secondAttribute="trailing" constant="166"/>
+                            <constraint id="2354" firstItem="1167" firstAttribute="leading" secondItem="15" secondAttribute="leading" constant="20"/>
+                            <constraint id="2356" firstItem="1167" firstAttribute="top" secondItem="720" secondAttribute="bottom" constant="8"/>
+                            <constraint id="2357" firstItem="15" firstAttribute="bottom" secondItem="1167" secondAttribute="bottom" constant="80"/>
+                            <constraint id="2358" firstItem="1168" firstAttribute="leading" secondItem="1167" secondAttribute="trailing" constant="8"/>
+                            <constraint id="2359" firstItem="15" firstAttribute="trailing" secondItem="1168" secondAttribute="trailing" constant="20"/>
+                            <constraint id="2361" firstItem="1168" firstAttribute="top" secondItem="1166" secondAttribute="bottom" constant="8"/>
+                            <constraint id="2362" firstItem="15" firstAttribute="bottom" secondItem="1168" secondAttribute="bottom" constant="80"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Facilities" id="14"/>
                 </viewController>
@@ -124,14 +154,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1432" translatesAutoresizingMaskIntoConstraints="NO" image="bgMahroon.jpg">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1432" translatesAutoresizingMaskIntoConstraints="NO" image="bgMahroon.jpg" misplaced="YES">
+                                <rect key="frame" x="0.0" y="66" width="320" height="454"/>
                                 <constraints>
                                     <constraint id="2236" firstItem="1432" firstAttribute="height" constant="548"/>
+                                    <constraint id="2534" firstItem="1432" firstAttribute="width" constant="320"/>
+                                    <constraint id="2536" firstItem="1432" firstAttribute="height" constant="454"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="1612" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="125" y="66" width="75" height="74"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="1612" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" misplaced="YES">
+                                <rect key="frame" x="0.0" y="66" width="320" height="74"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="0.76470588235294112" green="0.64313725490196083" blue="0.11764705882352941" alpha="1"/>
                                 <nil key="highlightedColor"/>
@@ -140,35 +172,78 @@
                                         <attributes>
                                             <color key="NSColor" colorSpace="calibratedRGB" red="0.76470588235294112" green="0.64313725490196083" blue="0.11764705882352941" alpha="1"/>
                                             <font key="NSFont" name="TimesNewRomanPS-BoldMT" family="Times New Roman" size="35"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
+                                <constraints>
+                                    <constraint id="2568" firstItem="1612" firstAttribute="height" constant="74"/>
+                                    <constraint id="2571" firstItem="1612" firstAttribute="width" constant="320"/>
+                                </constraints>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="1615" translatesAutoresizingMaskIntoConstraints="NO" text="Make your Journey Plans and know more about time tables of Busses, Trains, Trams." numberOfLines="6" textAlignment="center">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="1615" translatesAutoresizingMaskIntoConstraints="NO" text="Make your Journey Plans and know more about time tables of Busses, Trains, Trams." numberOfLines="6" textAlignment="center" misplaced="YES">
                                 <rect key="frame" x="0.0" y="122" width="320" height="145"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="0.76470588235294112" green="0.64313725490196083" blue="0.11764705882352941" alpha="1"/>
                                 <nil key="highlightedColor"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="25"/>
                                 <constraints>
-                                    <constraint id="2309" firstItem="1615" firstAttribute="height" constant="145"/>
+                                    <constraint id="2544" firstItem="1615" firstAttribute="width" constant="320"/>
+                                    <constraint id="2545" firstItem="1615" firstAttribute="height" constant="145"/>
                                 </constraints>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1620" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1620" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="125" y="346" width="97" height="88"/>
                                 <state key="normal" backgroundImage="ptvbutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <constraints>
+                                    <constraint id="2562" firstItem="1620" firstAttribute="height" constant="88"/>
+                                    <constraint id="2565" firstItem="1620" firstAttribute="width" constant="97"/>
+                                </constraints>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="2377" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" misplaced="YES">
+                                <rect key="frame" x="0.0" y="300" width="320" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.76470588235294112" green="0.62352941176470589" blue="0.10980392156862745" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="www.metlinkmelbourne.com.au/">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.76470588235294112" green="0.62352941176470589" blue="0.10980392156862745" alpha="1"/>
+                                            <font key="NSFont" name="TimesNewRomanPS-BoldMT" family="Times New Roman" size="21"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <constraints>
+                                    <constraint id="2558" firstItem="2377" firstAttribute="height" constant="21"/>
+                                    <constraint id="2559" firstItem="2377" firstAttribute="width" constant="320"/>
+                                </constraints>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint id="2234" firstItem="1432" firstAttribute="leading" secondItem="1427" secondAttribute="leading"/>
                             <constraint id="2235" firstItem="1432" firstAttribute="trailing" secondItem="1427" secondAttribute="trailing"/>
                             <constraint id="2237" firstItem="1432" firstAttribute="bottom" secondItem="1427" secondAttribute="bottom"/>
-                            <constraint id="2307" firstItem="1615" firstAttribute="trailing" secondItem="1432" secondAttribute="trailing"/>
-                            <constraint id="2308" firstItem="1615" firstAttribute="leading" secondItem="1432" secondAttribute="leading"/>
-                            <constraint id="2310" firstItem="1432" firstAttribute="bottom" secondItem="1615" secondAttribute="bottom" constant="301"/>
+                            <constraint id="2533" firstItem="1432" firstAttribute="top" secondItem="1427" secondAttribute="top" constant="66"/>
+                            <constraint id="2535" firstItem="1432" firstAttribute="leading" secondItem="1427" secondAttribute="leading"/>
+                            <constraint id="2540" firstItem="1615" firstAttribute="trailing" secondItem="1432" secondAttribute="trailing"/>
+                            <constraint id="2541" firstItem="1615" firstAttribute="leading" secondItem="1432" secondAttribute="leading"/>
+                            <constraint id="2542" firstItem="1432" firstAttribute="bottom" secondItem="1615" secondAttribute="bottom" constant="253"/>
+                            <constraint id="2543" firstItem="1615" firstAttribute="top" secondItem="1612" secondAttribute="top" constant="56"/>
+                            <constraint id="2554" firstItem="2377" firstAttribute="trailing" secondItem="1432" secondAttribute="trailing"/>
+                            <constraint id="2555" firstItem="2377" firstAttribute="leading" secondItem="1432" secondAttribute="leading"/>
+                            <constraint id="2556" firstItem="2377" firstAttribute="top" secondItem="1615" secondAttribute="centerY" constant="105"/>
+                            <constraint id="2557" firstItem="1432" firstAttribute="bottom" secondItem="2377" secondAttribute="bottom" constant="199"/>
+                            <constraint id="2560" firstItem="1432" firstAttribute="trailing" secondItem="1620" secondAttribute="trailing" constant="98"/>
+                            <constraint id="2561" firstItem="1620" firstAttribute="leading" secondItem="1432" secondAttribute="leading" constant="125"/>
+                            <constraint id="2563" firstItem="1620" firstAttribute="top" secondItem="2377" secondAttribute="centerY" constant="35"/>
+                            <constraint id="2564" firstItem="1432" firstAttribute="bottom" secondItem="1620" secondAttribute="bottom" constant="86"/>
+                            <constraint id="2566" firstItem="1612" firstAttribute="trailing" secondItem="1432" secondAttribute="trailing"/>
+                            <constraint id="2567" firstItem="1612" firstAttribute="leading" secondItem="1432" secondAttribute="leading"/>
+                            <constraint id="2569" firstItem="1612" firstAttribute="top" secondItem="1432" secondAttribute="top"/>
+                            <constraint id="2570" firstItem="1615" firstAttribute="centerY" secondItem="1612" secondAttribute="bottom" constant="54"/>
                         </constraints>
                     </view>
                     <connections>
@@ -224,28 +299,37 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1693" translatesAutoresizingMaskIntoConstraints="NO" highlightedImage="bgMahroon.jpg" image="bgMahroon.jpg" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1693" translatesAutoresizingMaskIntoConstraints="NO" highlightedImage="bgMahroon.jpg" image="bgMahroon.jpg">
+                                <rect key="frame" x="0.0" y="63" width="320" height="451"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1694" translatesAutoresizingMaskIntoConstraints="NO" image="dev.jpg" fixedFrame="YES">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1694" translatesAutoresizingMaskIntoConstraints="NO" image="dev.jpg">
                                 <rect key="frame" x="8" y="155" width="304" height="220"/>
+                                <constraints>
+                                    <constraint id="2604" firstItem="1694" firstAttribute="height" constant="220"/>
+                                    <constraint id="2624" firstItem="1694" firstAttribute="width" constant="304"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1695">
-                                <rect key="frame" x="75" y="86" width="154" height="71"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1695">
+                                <rect key="frame" x="0.0" y="86" width="320" height="71"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Developer">
                                         <attributes>
                                             <color key="NSColor" colorSpace="calibratedRGB" red="0.87450980392156863" green="0.87058823529411766" blue="0.43529411764705883" alpha="1"/>
                                             <font key="NSFont" name="TimesNewRomanPS-BoldMT" family="Times New Roman" size="35"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="2640" firstItem="1695" firstAttribute="height" constant="71"/>
+                                    <constraint id="2652" firstItem="1695" firstAttribute="height" constant="71"/>
+                                    <constraint id="2660" firstItem="1695" firstAttribute="width" constant="320"/>
+                                </constraints>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1696" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="279" y="64" width="33" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1696" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="279" y="76" width="33" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" backgroundImage="copyright-of--yellow-flag-icon-24530.png">
                                     <color key="titleShadowColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
@@ -255,12 +339,15 @@
                                     <segue id="1761" destination="1703" kind="push"/>
                                 </connections>
                                 <accessibility key="accessibilityConfiguration" hint="Copy Rights"/>
+                                <constraints>
+                                    <constraint id="2695" firstItem="1696" firstAttribute="height" constant="36"/>
+                                </constraints>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1699" numberOfLines="6" fixedFrame="YES">
-                                <rect key="frame" x="8" y="369" width="304" height="135"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1699" numberOfLines="6">
+                                <rect key="frame" x="0.0" y="379" width="320" height="135"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Gobind Kumar                   SID: 213439497                              Deakin University, Australia">
+                                    <fragment content="Gobind Kumar                                   SID: 213439497                              Deakin University, Australia">
                                         <attributes>
                                             <color key="NSColor" colorSpace="calibratedRGB" red="0.91764705882352937" green="0.87450980392156863" blue="0.39215686274509803" alpha="1"/>
                                             <font key="NSFont" name="TimesNewRomanPS-BoldMT" family="Times New Roman" size="25"/>
@@ -269,8 +356,34 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="2675" firstItem="1699" firstAttribute="width" constant="320"/>
+                                    <constraint id="2684" firstItem="1699" firstAttribute="height" constant="135"/>
+                                </constraints>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint id="2523" firstItem="1693" firstAttribute="trailing" secondItem="1654" secondAttribute="trailing"/>
+                            <constraint id="2596" firstItem="1694" firstAttribute="leading" secondItem="1693" secondAttribute="leading" constant="8"/>
+                            <constraint id="2600" firstItem="1693" firstAttribute="trailing" secondItem="1694" secondAttribute="trailing" constant="8"/>
+                            <constraint id="2608" firstItem="1694" firstAttribute="top" secondItem="1693" secondAttribute="top" constant="92"/>
+                            <constraint id="2611" firstItem="1693" firstAttribute="bottom" secondItem="1694" secondAttribute="bottom" constant="139"/>
+                            <constraint id="2616" firstItem="1654" firstAttribute="bottom" secondItem="1693" secondAttribute="bottom" constant="54"/>
+                            <constraint id="2619" firstItem="1693" firstAttribute="top" secondItem="1654" secondAttribute="top" constant="63"/>
+                            <constraint id="2627" firstItem="1693" firstAttribute="leading" secondItem="1654" secondAttribute="leading"/>
+                            <constraint id="2632" firstItem="1695" firstAttribute="trailing" secondItem="1693" secondAttribute="trailing"/>
+                            <constraint id="2636" firstItem="1695" firstAttribute="leading" secondItem="1693" secondAttribute="leading"/>
+                            <constraint id="2648" firstItem="1695" firstAttribute="top" secondItem="1693" secondAttribute="top" constant="23"/>
+                            <constraint id="2657" firstItem="1695" firstAttribute="bottom" secondItem="1694" secondAttribute="top" constant="2"/>
+                            <constraint id="2669" firstItem="1699" firstAttribute="top" secondItem="1694" secondAttribute="bottom" constant="4"/>
+                            <constraint id="2672" firstItem="1699" firstAttribute="bottom" secondItem="1693" secondAttribute="bottom"/>
+                            <constraint id="2678" firstItem="1699" firstAttribute="trailing" secondItem="1693" secondAttribute="trailing"/>
+                            <constraint id="2681" firstItem="1699" firstAttribute="leading" secondItem="1693" secondAttribute="leading"/>
+                            <constraint id="2689" firstItem="1693" firstAttribute="trailing" secondItem="1696" secondAttribute="trailing" constant="8"/>
+                            <constraint id="2692" firstItem="1696" firstAttribute="leading" secondItem="1693" secondAttribute="leading" constant="279"/>
+                            <constraint id="2698" firstItem="1696" firstAttribute="top" secondItem="1693" secondAttribute="top" constant="13"/>
+                            <constraint id="2701" firstItem="1695" firstAttribute="bottom" secondItem="1696" secondAttribute="bottom" constant="45"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1655" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -289,38 +402,61 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1763" translatesAutoresizingMaskIntoConstraints="NO" image="bgMahroon.jpg" fixedFrame="YES">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1763" translatesAutoresizingMaskIntoConstraints="NO" image="bgMahroon.jpg">
                                 <rect key="frame" x="0.0" y="62" width="320" height="447"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1764">
-                                <rect key="frame" x="73" y="75" width="193" height="71"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1764">
+                                <rect key="frame" x="0.0" y="122" width="320" height="71"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Copy Rights">
                                         <attributes>
                                             <color key="NSColor" colorSpace="calibratedRGB" red="0.87450980392156863" green="0.87058823529411766" blue="0.43529411764705883" alpha="1"/>
                                             <font key="NSFont" name="TimesNewRomanPS-BoldMT" family="Times New Roman" size="35"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1765" numberOfLines="6" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="161" width="320" height="156"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="All copyrights reserved.               None of the image and any part of this app is permitted to use for commercial purposes.">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.91764705882352937" green="0.87450980392156863" blue="0.39215686274509803" alpha="1"/>
-                                            <font key="NSFont" name="TimesNewRomanPS-BoldMT" family="Times New Roman" size="20"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="2639" firstItem="1764" firstAttribute="height" constant="71"/>
+                                    <constraint id="2651" firstItem="1764" firstAttribute="height" constant="71"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1765" numberOfLines="30">
+                                <rect key="frame" x="0.0" y="161" width="320" height="257"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="©Gobind Kumar 2016&#xA;Except as permitted by the copyright law applicable to you, you may not reproduce or communicate any of the content on this app and associated websites, including files downloadable from here, without the permission of the copyright owner.&#xA;The Australian Copyright Act allows certain uses of content from the internet without the copyright owner’s permission. This includes uses by educational institutions and by Commonwealth and State governments, provided fair compensation is paid. For more information, seewww.copyright.com.au and www.copyright.org.au. To get copyrights write @ ggobindk@deakin.edu.au&#xA;The owners of copyright in the content may receive compensation for the use of their content by educational institutions and governments, including from licensing schemes managed by Gobind Kumar.&#xA;We may change these terms of use from time to time. Check before re-using any content from this app and/or website.&#xA;THIS INFORMATION IS FOR GUIDANCE ONLY. IT IS NOT LEGAL ADVICE.">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="10"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="2599" firstItem="1765" firstAttribute="height" constant="257"/>
+                                    <constraint id="2612" firstItem="1765" firstAttribute="width" constant="320"/>
+                                </constraints>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint id="2524" firstItem="1763" firstAttribute="trailing" secondItem="1704" secondAttribute="trailing"/>
+                            <constraint id="2592" firstItem="1765" firstAttribute="trailing" secondItem="1763" secondAttribute="trailing"/>
+                            <constraint id="2595" firstItem="1765" firstAttribute="leading" secondItem="1763" secondAttribute="leading"/>
+                            <constraint id="2603" firstItem="1763" firstAttribute="bottom" secondItem="1765" secondAttribute="bottom" constant="91"/>
+                            <constraint id="2607" firstItem="1765" firstAttribute="top" secondItem="1763" secondAttribute="top" constant="99"/>
+                            <constraint id="2615" firstItem="1704" firstAttribute="bottom" secondItem="1763" secondAttribute="bottom" constant="59"/>
+                            <constraint id="2620" firstItem="1763" firstAttribute="top" secondItem="1704" secondAttribute="top" constant="62"/>
+                            <constraint id="2623" firstItem="1763" firstAttribute="leading" secondItem="1704" secondAttribute="leading"/>
+                            <constraint id="2628" firstItem="1764" firstAttribute="trailing" secondItem="1763" secondAttribute="trailing"/>
+                            <constraint id="2631" firstItem="1764" firstAttribute="leading" secondItem="1763" secondAttribute="leading"/>
+                            <constraint id="2635" firstItem="1764" firstAttribute="leading" secondItem="1763" secondAttribute="leading"/>
+                            <constraint id="2643" firstItem="1763" firstAttribute="bottom" secondItem="1764" secondAttribute="bottom" constant="316"/>
+                            <constraint id="2647" firstItem="1764" firstAttribute="top" secondItem="1763" secondAttribute="top" constant="60"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1705" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,26 +520,35 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bgMahroon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1788" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="66" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bgMahroon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1788">
+                                <rect key="frame" x="0.0" y="66" width="320" height="455"/>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="66" width="320" height="568"/>
+                                    <rect key="frame" x="0.0" y="366" width="320" height="155"/>
                                 </variation>
+                                <constraints>
+                                    <constraint id="2437" firstItem="1788" firstAttribute="height" constant="455"/>
+                                    <constraint id="2440" firstItem="1788" firstAttribute="width" constant="320"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1789" fixedFrame="YES">
-                                <rect key="frame" x="20" y="115" width="290" height="71"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1789">
+                                <rect key="frame" x="0.0" y="115" width="320" height="71"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Melbourne Mentor ">
                                         <attributes>
-                                            <color key="NSColor" red="0.87450980392156863" green="0.87058823529411766" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="35" name="TimesNewRomanPS-BoldMT"/>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.87450980392156863" green="0.87058823529411766" blue="0.43529411764705883" alpha="1"/>
+                                            <font key="NSFont" name="TimesNewRomanPS-BoldMT" family="Times New Roman" size="35"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="2508" firstItem="1789" firstAttribute="height" constant="71"/>
+                                    <constraint id="2511" firstItem="1789" firstAttribute="width" constant="320"/>
+                                </constraints>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1790" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1790">
                                 <rect key="frame" x="55" y="257" width="210" height="155"/>
                                 <state key="normal" backgroundImage="videobutton.png">
                                     <attributedString key="attributedTitle">
@@ -417,22 +562,12 @@
                                 <connections>
                                     <action selector="UIButton1790_TouchUpInside:" destination="1773" id="2325" eventType="touchUpInside"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="2443" firstItem="1790" firstAttribute="height" constant="155"/>
+                                    <constraint id="2446" firstItem="1790" firstAttribute="width" constant="210"/>
+                                </constraints>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1791" fixedFrame="YES">
-                                <rect key="frame" x="86" y="205" width="148" height="71"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Take a tour">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.91764705882352937" green="0.87450980392156863" blue="0.39215686274509803" alpha="1"/>
-                                            <font key="NSFont" name="TimesNewRomanPS-BoldMT" family="Times New Roman" size="30"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1792" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1792" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="273" y="76" width="37" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" backgroundImage="icon-Info.png">
@@ -443,8 +578,30 @@
                                     <segue id="1904" destination="1653" kind="push"/>
                                 </connections>
                                 <accessibility key="accessibilityConfiguration" hint="Developer &amp; Copy Rights"/>
+                                <constraints>
+                                    <constraint id="2517" firstItem="1792" firstAttribute="height" constant="31"/>
+                                    <constraint id="2520" firstItem="1792" firstAttribute="width" constant="37"/>
+                                </constraints>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint id="2435" firstItem="1788" firstAttribute="trailing" secondItem="1778" secondAttribute="trailing"/>
+                            <constraint id="2436" firstItem="1788" firstAttribute="leading" secondItem="1778" secondAttribute="leading"/>
+                            <constraint id="2438" firstItem="1778" firstAttribute="bottom" secondItem="1788" secondAttribute="bottom" constant="47"/>
+                            <constraint id="2439" firstItem="1788" firstAttribute="top" secondItem="1778" secondAttribute="top" constant="66"/>
+                            <constraint id="2441" firstItem="1788" firstAttribute="trailing" secondItem="1790" secondAttribute="trailing" constant="55"/>
+                            <constraint id="2442" firstItem="1790" firstAttribute="leading" secondItem="1788" secondAttribute="leading" constant="55"/>
+                            <constraint id="2444" firstItem="1788" firstAttribute="bottom" secondItem="1790" secondAttribute="bottom" constant="109"/>
+                            <constraint id="2445" firstItem="1790" firstAttribute="top" secondItem="1788" secondAttribute="top" constant="191"/>
+                            <constraint id="2506" firstItem="1789" firstAttribute="trailing" secondItem="1788" secondAttribute="trailing"/>
+                            <constraint id="2507" firstItem="1789" firstAttribute="leading" secondItem="1788" secondAttribute="leading"/>
+                            <constraint id="2509" firstItem="1789" firstAttribute="top" secondItem="1788" secondAttribute="top" constant="49"/>
+                            <constraint id="2510" firstItem="1788" firstAttribute="bottom" secondItem="1789" secondAttribute="bottom" constant="335"/>
+                            <constraint id="2515" firstItem="1788" firstAttribute="trailing" secondItem="1792" secondAttribute="trailing" constant="10"/>
+                            <constraint id="2516" firstItem="1792" firstAttribute="leading" secondItem="1788" secondAttribute="leading" constant="273"/>
+                            <constraint id="2518" firstItem="1789" firstAttribute="top" secondItem="1792" secondAttribute="bottom" constant="8"/>
+                            <constraint id="2519" firstItem="1792" firstAttribute="top" secondItem="1788" secondAttribute="top" constant="10"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Introduction" id="1777"/>
                 </viewController>
@@ -507,6 +664,8 @@
                             <outlet property="delegate" destination="1940" id="1943"/>
                         </connections>
                         <color key="tintColor" colorSpace="calibratedRGB" red="0.71764705882352942" green="0.14509803921568629" blue="0.10980392156862745" alpha="1"/>
+                        <color key="sectionIndexBackgroundColor" colorSpace="calibratedRGB" red="0.54509803921568623" green="0" blue="0.031372549019607843" alpha="1"/>
+                        <color key="separatorColor" colorSpace="calibratedRGB" red="0.64313725490196083" green="0" blue="0.00392156862745098" alpha="1"/>
                     </tableView>
                     <connections>
                         <outlet property="EventData" destination="1941" id="name-outlet-1941"/>
